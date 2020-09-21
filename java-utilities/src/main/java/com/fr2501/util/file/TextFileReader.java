@@ -8,10 +8,10 @@ import java.util.List;
 /**
  * 
  * An interface to provide simple interaction with the file system.
- * For writing instead of reading files, see {@link FileWriter}.
+ * For writing instead of reading files, see {@link TextFileWriter}.
  *
  */
-public interface FileReader {
+public interface TextFileReader {
 	
 	/**
 	 * @see #readFile(File)
