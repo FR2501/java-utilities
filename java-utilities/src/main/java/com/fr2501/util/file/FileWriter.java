@@ -14,12 +14,12 @@ import java.util.Collection;
 public interface FileWriter {
 
 	/**
-	 * @see #writeToFile(File, Collection)
+	 * @see #writeToFile(File, String)
 	 */
 	public void writeToFile(String path, String content) throws IOException;
 	
 	/**
-	 * @see #writeToFile(File, Collection)
+	 * @see #writeToFile(File, String)
 	 */
 	public void writeToFile(URL url, String content) throws IOException;
 	
