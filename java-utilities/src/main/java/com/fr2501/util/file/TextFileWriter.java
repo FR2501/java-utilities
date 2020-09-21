@@ -43,7 +43,8 @@ public interface TextFileWriter {
 	
 	/**
 	 * Writes the given contents to a file, possibly creating or overwriting it.
-	 * Every item of the collection appears on a new line.
+	 * Every item of the collection appears on a new line, separated by {@link System#lineSeparator()}.
+	 * To determine the String representing an object, its {@link Object#toString()} method is used.
 	 * The collection's iterator is used, thus its behavior will be mirrored.
 	 * @param file  the file to be written to
 	 * @param content  the content

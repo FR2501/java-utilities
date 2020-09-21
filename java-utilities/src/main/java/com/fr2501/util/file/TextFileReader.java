@@ -24,7 +24,7 @@ public interface TextFileReader {
 	public String readFile(URL url) throws IOException;
 	
 	/**
-	 * Returns the contents of a file, just as they are.
+	 * Returns the contents of a file, ends of lines in the file are set to {@link System#lineSeparator()}.
 	 * @param file  the file to be read
 	 * @return the contents of that file
 	 * @throws IOException  if file system interaction fails
