@@ -27,19 +27,20 @@ public class SimpleTextFileReader implements TextFileReader {
 
 	@Override
 	public String readFile(File file) throws IOException {
-		List<String> lines = this.readFileLineByLine(file);
-		
 		String result = "";
-		for(String line: lines) {
-			result += line + System.lineSeparator();
-		}
 		
-		// Remove additional separator after last line.
-		if(!result.isEmpty()) {
-			result = result.substring(0, result.length() - System.lineSeparator().length());
+		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+			int characterNum = br.read();
+			while(characterNum != -1) {
+				result += (char) characterNum;
+				
+				characterNum = br.read();
+			} 
+			
+			return result;
+		} catch (IOException e) {
+			throw e;
 		}
-		
-		return result;
 	}
 
 	@Override
@@ -68,5 +69,4 @@ public class SimpleTextFileReader implements TextFileReader {
 			throw e;
 		}
 	}
-
 }
