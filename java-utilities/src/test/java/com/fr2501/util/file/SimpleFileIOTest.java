@@ -11,7 +11,7 @@ import org.junit.Test;
  *
  */
 public class SimpleFileIOTest {
-	private static final String SIMPLE_TEST_STRING = "The quick brown fox jumped over the lazy dog.\n";
+	private static final String SIMPLE_TEST_STRING = "The quick brown fox jumped over the lazy dog.";
 	
     @Test
     /**

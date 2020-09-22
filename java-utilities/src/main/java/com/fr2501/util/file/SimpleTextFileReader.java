@@ -34,6 +34,9 @@ public class SimpleTextFileReader implements TextFileReader {
 			result += line + System.lineSeparator();
 		}
 		
+		// Remove additional line separator after the last line.
+		result = result.substring(0,result.length() - System.lineSeparator().length());
+		
 		return result;
 	}
 
