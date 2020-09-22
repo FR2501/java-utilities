@@ -62,8 +62,12 @@ public class SimpleTextFileWriter implements TextFileWriter {
 	public void writeCollectionToFile(File file, Collection<?> content, String separator) throws IOException {
 		String contentString = "";
 		
-		for(Object o: content) {
-			contentString += o.toString() + separator;
+		if(content.size() != 0) {
+			for(Object o: content) {
+				contentString += o.toString() + separator;
+			}
+			
+			contentString = contentString.substring(0, contentString.length() - separator.length());
 		}
 		
 		this.writeToFile(file, contentString);
